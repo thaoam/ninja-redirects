@@ -1,0 +1,5 @@
+title: redirect.ninja.tk
+permalink: /:slug/
+
+plugins:
+  - jekyll-redirect-from
