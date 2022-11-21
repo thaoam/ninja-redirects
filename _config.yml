@@ -3,7 +3,7 @@ permalink: /:slug/
 
 collections:
   domains:
-    output: false
+    output: true
     permalink: /:title
 
 plugins:
