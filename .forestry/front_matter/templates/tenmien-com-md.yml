@@ -1,0 +1,10 @@
+---
+label: tenmien.com.md
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: redirect_to
+  label: redirect_to
