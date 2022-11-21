@@ -8,3 +8,5 @@ fields:
 - type: text
   name: redirect_to
   label: redirect_to
+pages:
+- _domains/hf88.bet.md
