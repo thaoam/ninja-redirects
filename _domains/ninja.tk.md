@@ -1,4 +1,4 @@
 ---
-domain: ninja.tk
+title: ninja.tk
 redirect_to: https://ninja.tk
 ---

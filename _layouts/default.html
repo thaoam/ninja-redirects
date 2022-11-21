@@ -77,7 +77,7 @@
 
 <main>
   {{ content }}
-  {%- assign redirects = site.pages | where_exp: "item", "item.redirect_to != nil" -%}
+  {%- assign redirects = site.domains | where_exp: "item", "item.redirect_to != nil" -%}
   <table>
     {% for page in redirects %}
     <tr>
