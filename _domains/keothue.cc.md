@@ -1,5 +1,5 @@
 ---
 title: keothue.cc
-redirect_to: nhap-link-hau-dai-tai-day
+redirect_to: https://www.new88ww.com/?uagt=newb01r02&path=signup
 
 ---
