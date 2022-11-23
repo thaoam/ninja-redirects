@@ -141,36 +141,15 @@ only screen and (max-width: 760px),
     {% for page in redirects %}
     <tr>
       <td>
-      <!-- The text field -->
-<input type="hidden" value="{{ site.url }}{{ page.url | relative_url }}" id="myInput">
+      <!-- The blackcat -->
+      {{ site.url }}{{ page.url | relative_url }}
 
-<!-- The button used to copy the text -->
-<button onclick="myFunction()">Copy link</button>
-      
-      
 </td>
       <td><a href="{{ page.redirect_to }}" target="_onm">{{ page.redirect_to }}</a></td>
     </tr>
     {% endfor %}
   </table>
 </main>
-
-<script>
-function myFunction() {
-  // Get the text field
-  var copyText = document.getElementById("myInput");
-
-  // Select the text field
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); // For mobile devices
-
-  // Copy the text inside the text field
-  navigator.clipboard.writeText(copyText.value);
-  
-  // Alert the copied text
-  alert("Copied the text: " + copyText.value);
-}
-</script>
 
 </body>
 </html>
