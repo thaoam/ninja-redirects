@@ -4,9 +4,14 @@
 <title>redirect system from ninja</title>
 
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style type="text/css">
+
+*{
+    margin:0;
+    padding: 0;
+}
+
   :root {
     --space: 1rem;
   }
@@ -81,7 +86,7 @@
   <table>
     {% for page in redirects %}
     <tr>
-      <td><a href="{{ page.url | relative_url }}" target="_onm">{{ page.url }}</a></td>
+      <td>{{ page.url | relative_url }}</td>
       <td><a href="{{ page.redirect_to }}" target="_onm">{{ page.redirect_to }}</a></td>
     </tr>
     {% endfor %}
