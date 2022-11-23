@@ -142,13 +142,13 @@ only screen and (max-width: 760px),
     <tr>
       <td>
       <!-- The text field -->
-<input type="text" value="{{ site.url }}{{ page.url | relative_url }}" id="myInput">
+<input type="hidden" value="{{ site.url }}{{ page.url | relative_url }}" id="myInput">
 
 <!-- The button used to copy the text -->
 <button onclick="myFunction()">Copy link</button>
       
       
-      {{ site.url }}{{ page.url | relative_url }}</td>
+</td>
       <td><a href="{{ page.redirect_to }}" target="_onm">{{ page.redirect_to }}</a></td>
     </tr>
     {% endfor %}
