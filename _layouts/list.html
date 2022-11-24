@@ -193,20 +193,19 @@ body {
   <thead>
     <tr>
       <th scope="col">Domain</th>
-      <th scope="col">From</th>
       <th scope="col">Target</th>
     </tr>
   </thead>
   <tbody>
     {% for page in redirects %}
     <tr>
-      <td scope="row" data-label="Account">{{ page.title }}</td>
-      <td data-label="Due Date">
+
+      <td data-label="{{ page.title }}">
       <!-- The blackcat -->
       <p class="btn" onclick="copy(this)">{{ site.url }}{{ page.url | relative_url }}</p>
 
 </td>
-      <td data-label="Amount"><a href="{{ page.redirect_to }}" target="_onm">{{ page.redirect_to }}</a></td>
+      <td data-label="Target"><a href="{{ page.redirect_to }}" target="_onm">{{ page.redirect_to }}</a></td>
     </tr>
     {% endfor %}
     </tbody>
