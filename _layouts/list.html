@@ -5,6 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <style type="text/css">
 
 *{
@@ -19,6 +20,13 @@ white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
 word-wrap: break-word; /* IE */
 word-break: break-all;
 }
+
+p {
+   visibility: hidden;
+   display:none;
+}
+
+
 
   :root {
     --space: 1rem;
@@ -142,7 +150,8 @@ only screen and (max-width: 760px),
     <tr>
       <td>
       <!-- The blackcat -->
-      {{ site.url }}{{ page.url | relative_url }}
+      <p id="{{ page.title }}">{{ site.url }}{{ page.url | relative_url }}</p>
+      <button onclick="copyToClipboard('#{{ page.title }}')">Copy {{ page.title }}</button>
 
 </td>
       <td><a href="{{ page.redirect_to }}" target="_onm">{{ page.redirect_to }}</a></td>
@@ -151,5 +160,14 @@ only screen and (max-width: 760px),
   </table>
 </main>
 
+<script>
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+</script>
 </body>
 </html>
