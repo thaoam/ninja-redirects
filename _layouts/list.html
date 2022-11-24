@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 <style type="text/css">
 
 *{
@@ -21,9 +21,26 @@ word-wrap: break-word; /* IE */
 word-break: break-all;
 }
 
-p {
-   visibility: hidden;
-   display:none;
+.btn{
+float:left;
+width:auto;
+height:30px;
+display:block;
+border:1px solid #303030;
+background:#fff;
+color:#000;
+line-height:30px;
+text-align:center;
+padding:0 20px;
+border-radius:3px;
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+max-width: 17.5ch;
+}
+
+.btn:hover{
+ cursor:pointer;
 }
 
 
@@ -150,8 +167,7 @@ only screen and (max-width: 760px),
     <tr>
       <td>
       <!-- The blackcat -->
-      <p id="{{ page.title }}">{{ site.url }}{{ page.url | relative_url }}</p>
-      <button onclick="copyToClipboard('#{{ page.title }}')">Copy {{ page.title }}</button>
+      <p class="btn" onclick="copy(this)">{{ site.url }}{{ page.url | relative_url }}</p>
 
 </td>
       <td><a href="{{ page.redirect_to }}" target="_onm">{{ page.redirect_to }}</a></td>
@@ -161,12 +177,13 @@ only screen and (max-width: 760px),
 </main>
 
 <script>
-function copyToClipboard(element) {
-  var $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val($(element).text()).select();
-  document.execCommand("copy");
-  $temp.remove();
+function copy(that){
+var inp =document.createElement('input');
+document.body.appendChild(inp)
+inp.value =that.textContent
+inp.select();
+document.execCommand('copy',false);
+inp.remove();
 }
 </script>
 </body>
