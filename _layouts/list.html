@@ -187,7 +187,7 @@ body {
 
 <main>
   {{ content }}
-  {%- assign redirects = site.domains.first.title | where_exp: "item", "item.redirect_to != nil" -%}
+  {%- assign redirects = site.domains | where_exp: "item", "item.redirect_to != nil" -%}
   <table>
   <caption>Link 2-step</caption>
   <thead>
@@ -197,7 +197,7 @@ body {
     </tr>
   </thead>
   <tbody>
-    {% for page in redirects %}
+    {% for page in redirects limit:10 %}
     <tr>
 
       <td data-label="{{ page.title }}">
