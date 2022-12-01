@@ -9,6 +9,7 @@ fields:
   name: redirect_to
   label: redirect_to
 pages:
+- _domains/cashback.cf.md
 - _domains/casinohp.com.md
 - _domains/hf88.bet.md
 - _domains/keothue.cc.md
