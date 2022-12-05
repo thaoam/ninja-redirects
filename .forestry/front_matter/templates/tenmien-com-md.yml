@@ -9,6 +9,7 @@ fields:
   name: redirect_to
   label: redirect_to
 pages:
+- _domains/778899b.com.md
 - _domains/789789b.com.md
 - _domains/8809.me.md
 - _domains/8809.tech.md
