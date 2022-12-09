@@ -1,5 +1,5 @@
 ---
 title: saigon.gq
-redirect_to: https://ninja.tk
+redirect_to: https://blackcat.tk/domain/pricing
 
 ---
